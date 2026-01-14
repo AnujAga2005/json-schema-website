@@ -252,7 +252,11 @@ export default function ToolingPage({
                 </p>
               </div>
             </div>
-            <GroupByMenu transform={transform} setTransform={setTransform} />
+            <GroupByMenu
+              transform={transform}
+              setTransform={setTransform}
+              activeSections={Object.keys(toolsByGroup)}
+            />
             <ToolingTable
               toolsByGroup={toolsByGroup}
               transform={transform}
