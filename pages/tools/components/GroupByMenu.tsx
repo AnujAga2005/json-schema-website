@@ -38,9 +38,18 @@ const GroupByMenu = ({
   }, []);
 
   const groupBy = [
-    { label: 'None', accessorKey: 'none' },
-    { label: 'Tooling Type', accessorKey: 'toolingTypes' },
-    { label: 'Language', accessorKey: 'languages' },
+    { 
+      label: 'None', 
+      accessorKey: 'none' 
+    },
+    { 
+      label: 'Tooling Type',
+      accessorKey: 'toolingTypes' 
+    },
+    { 
+      label: 'Language', 
+      accessorKey: 'languages' 
+    },
   ];
 
   const setGroupBy = (event: React.MouseEvent) => {
@@ -78,7 +87,7 @@ const GroupByMenu = ({
               onClick={setGroupBy}
               variant={groupedBy === group.accessorKey ? 'default' : 'outline'}
               size='sm'
-              className='shrink-0'
+              className={`${groupedBy === group.accessorKey ? 'text-white dark:text-slate-900 dark:bg-[#bfdbfe]' : 'dark:bg-[#0f172a] text-black dark:text-slate-300 dark:border-transparent'}`}
             >
               {group.label}
             </Button>
